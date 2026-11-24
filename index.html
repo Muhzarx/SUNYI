@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#080d0b">
+  <meta name="description" content="SUNYI: Lembah Terakhir — game horror survival 3D original.">
+  <title>SUNYI: Lembah Terakhir</title>
+  <link rel="stylesheet" href="./src/style.css">
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"}}
+  </script>
+</head>
+<body>
+  <div id="game"></div>
+  <div id="vignette"></div>
+  <section id="main-menu" class="screen">
+    <div class="menu-panel">
+      <p class="eyebrow">SEBUAH PENGALAMAN HORROR SURVIVAL</p>
+      <h1>SUNYI<span>:</span><br><em>LEMBah TERAKHIR</em></h1>
+      <p class="tagline">“Jika hutan berhenti bersuara, jangan ikut diam.”</p>
+      <div class="menu-actions">
+        <button id="new-game" class="primary">MULAI PERMAINAN</button>
+        <button id="continue-game">LANJUTKAN</button>
+        <button id="open-settings">PENGATURAN</button>
+        <button id="credits">KREDIT</button>
+      </div>
+      <p class="menu-foot">DEVELOPED BY MUHAMMAD HAFIZD ANSHARI</p>
+    </div>
+  </section>
+  <section id="pause-menu" class="screen hidden">
+    <div class="menu-panel compact">
+      <p class="eyebrow">PERMAINAN DIJEDA</p><h2>ISTIRAHAT SEJENAK</h2>
+      <button id="resume" class="primary">LANJUTKAN</button>
+      <button id="save-game">SIMPAN PERMAINAN</button>
+      <button id="pause-settings">PENGATURAN</button>
+      <button id="quit">KEMBALI KE MENU</button>
+    </div>
+  </section>
+  <section id="settings-menu" class="screen hidden">
+    <div class="menu-panel compact">
+      <p class="eyebrow">KONFIGURASI</p><h2>PENGATURAN</h2>
+      <label>Sensitivitas kamera <input id="sensitivity" type="range" min="0.3" max="2.5" step="0.1" value="1"></label>
+      <label>Volume master <input id="volume" type="range" min="0" max="1" step="0.05" value="0.45"></label>
+      <label class="check"><input id="invert-y" type="checkbox"> Balik sumbu Y</label>
+      <button id="close-settings" class="primary">SELESAI</button>
+    </div>
+  </section>
+  <section id="credits-menu" class="screen hidden">
+    <div class="menu-panel compact">
+      <h2>KREDIT</h2><p>Konsep, desain, dan pengembangan: Muhammad Hafizd Anshari.</p>
+      <p>Game engine: Three.js. Dunia dan aset lingkungan dibuat secara prosedural.</p>
+      <button id="close-credits" class="primary">KEMBALI</button>
+    </div>
+  </section>
+  <div id="hud" class="hidden">
+    <div class="hud-top">
+      <div class="objective"><small>TUJUAN SAAT INI</small><strong id="objective-text">Temukan jalan menuju desa</strong></div>
+      <div class="clock" id="clock">23:47</div>
+    </div>
+    <div class="crosshair">+</div>
+    <div class="hud-bottom">
+      <div class="status">
+        <div class="meter"><span>HEALTH</span><div class="track"><i id="health-fill"></i></div></div>
+        <div class="meter"><span>STAMINA</span><div class="track"><i id="stamina-fill"></i></div></div>
+        <div class="inventory-mini" id="inventory-mini">▣ Baterai: 0　✦ Catatan: 0</div>
+      </div>
+      <div class="hint" id="hint">WASD bergerak · Shift berlari · F senter · V kamera · E interaksi · Esc jeda</div>
+    </div>
+    <div id="toast"></div>
+    <div id="interaction" class="hidden">[ E ] INTERAKSI</div>
+    <div id="mobile-controls" class="hidden">
+      <div id="joystick"><div id="stick"></div></div>
+      <div id="look-zone"></div>
+      <div class="mobile-buttons">
+        <button id="mobile-run">LARI</button><button id="mobile-flash">SENTER</button><button id="mobile-use">AKSI</button><button id="mobile-view">KAMERA</button>
+      </div>
+    </div>
+  </div>
+  <div id="death-screen" class="screen hidden">
+    <div class="menu-panel compact"><p class="eyebrow">LEMBah MENELANMU</p><h2>KAU TELAH DITEMUKAN</h2><p>Gelap kembali mengambil alih.</p><button id="retry" class="primary">COBA LAGI</button><button id="death-menu">MENU UTAMA</button></div>
+  </div>
+  <script type="module" src="./src/game.js"></script>
+</body>
+</html>
