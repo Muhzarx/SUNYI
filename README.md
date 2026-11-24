@@ -1,98 +1,123 @@
-# SUNYI: Lembah Terakhir
+# 🌑 SUNYI — Lembah Terakhir
 
-**Original 3D Horror Survival — Web & Android Browser**  
-Developer: **Muhammad Hafizd Anshari**
+<p align="center">
+  <strong>JANGAN BIARKAN MEREKA MENEMUKANMU.</strong>
+</p>
 
-> “Jika hutan berhenti bersuara, jangan ikut diam.”
+<p align="center">
+  <a href="https://muhzarx.github.io/SUNYI/">
+    <img src="https://img.shields.io/badge/🎮%20MAIN%20SEKARANG-LIVE%20DEMO-red?style=for-the-badge" alt="Live Demo">
+  </a>
+</p>
 
-SUNYI: Lembah Terakhir adalah game horror survival 3D original yang dibuat dari nol menggunakan Three.js. Pemain menjelajahi lembah terpencil, mencari catatan dan baterai, menghindari makhluk yang berpatroli, lalu mengaktifkan pemancar radio.
+<p align="center">
+  <img src="https://img.shields.io/badge/Genre-Horror%20Survival-8b0000?style=flat-square">
+  <img src="https://img.shields.io/badge/Engine-Three.js-black?style=flat-square">
+  <img src="https://img.shields.io/badge/Platform-Web-blue?style=flat-square">
+  <img src="https://img.shields.io/badge/Language-Indonesia-white?style=flat-square">
+</p>
 
-## Fitur yang tersedia
+**SUNYI: Lembah Terakhir** adalah game 3D horror survival berbasis web. Jelajahi sebuah desa terpencil yang telah lama ditinggalkan, temukan petunjuk, kumpulkan perlengkapan, dan bertahan hidup dari sesuatu yang mengintaimu di balik kabut.
 
-- Dunia hutan malam prosedural dengan terrain berbukit, pepohonan, bebatuan, rumah desa, jalan setapak, kabut, cahaya bulan dan lentera.
-- Karakter utama 3D prosedural dengan animasi gerak dasar.
-- Kamera first-person dan third-person (tekan `V`).
-- Kontrol keyboard dan mouse, plus joystick dan tombol touchscreen.
-- Musuh dengan patroli, deteksi jarak, pengejaran, dan serangan.
-- Quest berurutan: menuju desa, mengumpulkan catatan, menemukan pemancar, mengaktifkan pemancar.
-- Item baterai dan catatan yang bisa dikumpulkan.
-- Health, stamina, sprint, senter, interaksi.
-- Ambient audio sintetis dan efek suara berbasis Web Audio API.
-- Menu utama, pause, pengaturan sensitivitas/volume/inversi Y, save/load lokal.
-- Tidak membutuhkan backend atau server database.
+Tidak ada tempat yang benar-benar aman.
 
-## Cara menjalankan
+## 🎮 Live Demo
 
-### Opsi 1 — lokal
+<p align="center">
+  <a href="https://muhzarx.github.io/SUNYI/">
+    <strong>▶ BUKA SUNYI — MAIN SEKARANG</strong>
+  </a>
+</p>
 
-Karena proyek memakai JavaScript ES Modules, jalankan melalui server lokal (jangan membuka `index.html` langsung sebagai `file://`).
+> Jika demo belum dapat dibuka, pastikan GitHub Pages sudah diaktifkan dan file game sudah tersedia di repository.
 
-Dengan Python:
+## 📖 Cerita
+
+Kamu terbangun di sebuah lembah terpencil tanpa mengingat bagaimana kamu bisa sampai di sana.
+
+Desa di sekitarmu terlihat kosong. Rumah-rumah terbengkalai, lampu yang masih menyala, dan suara-suara aneh dari dalam hutan menjadi satu-satunya petunjuk.
+
+Sebuah radio tua mungkin menyimpan jawaban.
+
+Namun, semakin jauh kamu menjelajah, semakin jelas bahwa kamu tidak sendirian.
+
+## 👁️ Fitur
+
+- 🌲 Dunia 3D dengan suasana hutan dan desa terbengkalai.
+- 🌫️ Kabut dan pencahayaan atmosfer horror.
+- 👤 Musuh dengan perilaku patroli dan pengejaran.
+- 🔦 Senter untuk membantu menjelajahi kegelapan.
+- 🔋 Sistem baterai dan perlengkapan.
+- ❤️ Sistem kesehatan dan stamina.
+- 📜 Catatan dan petunjuk untuk menemukan jalan keluar.
+- 📻 Misi untuk mengaktifkan radio.
+- 🎧 Efek suara atmosfer.
+- 💾 Penyimpanan progres permainan.
+- 📱 Kontrol untuk perangkat mobile.
+
+## 🕹️ Kontrol
+
+| Tombol | Fungsi |
+|---|---|
+| W A S D | Bergerak |
+| Mouse | Mengatur kamera |
+| Shift | Berlari |
+| E | Interaksi |
+| F | Menyalakan/mematikan senter |
+| V | Mengganti sudut kamera |
+| ESC | Pause |
+
+**Mobile:** Gunakan joystick untuk bergerak dan area layar sebelah kanan untuk mengatur kamera.
+
+## 🚀 Cara Menjalankan
+
+Game dapat dimainkan langsung melalui browser tanpa perlu menginstal aplikasi.
+
+Untuk menjalankan secara lokal:
+
+1. Download atau clone repository.
+2. Buka folder proyek.
+3. Jalankan menggunakan local web server.
+4. Buka alamat lokal di browser.
 
 ```bash
+git clone https://github.com/Muhzarx/SUNYI.git
+cd SUNYI
 python -m http.server 8000
 ```
 
-Lalu buka `http://localhost:8000`.
+Kemudian buka `http://localhost:8000`.
 
-Atau gunakan ekstensi Live Server pada VS Code.
+## 🌐 GitHub Pages
 
-### Opsi 2 — GitHub Pages
+Untuk mengaktifkan Live Demo:
 
-1. Buat repository GitHub baru.
-2. Upload seluruh isi folder proyek ini ke root repository.
-3. Buka **Settings → Pages**.
-4. Pada **Build and deployment**, pilih **Deploy from a branch**.
-5. Pilih branch `main` dan folder `/ (root)`, lalu klik Save.
-6. Tunggu proses deployment selesai. URL game akan tampil pada halaman Pages.
+1. Buka repository [SUNYI](https://github.com/Muhzarx/SUNYI).
+2. Masuk ke **Settings**.
+3. Pilih **Pages**.
+4. Pada bagian Build and deployment, pilih **Deploy from a branch**.
+5. Pilih branch `main` dan folder `/ (root)`.
+6. Klik **Save**.
 
-Tidak ada build step. Three.js dimuat dari jsDelivr CDN, sehingga browser harus memiliki koneksi internet saat pertama kali membuka game.
+Setelah deployment selesai, game dapat diakses melalui:
 
-## Kontrol
+**https://muhzarx.github.io/SUNYI/**
 
-| Aksi | Desktop | Android / Touch |
-|---|---|---|
-| Bergerak | WASD / tombol panah | Joystick kiri |
-| Melihat | Mouse | Geser area kanan |
-| Lari | Shift | Tahan LARI |
-| Interaksi | E | AKSI |
-| Senter | F | SENTER |
-| Ganti kamera | V | KAMERA |
-| Pause | Esc | Tombol kembali perangkat / sembunyikan tab |
+## 👨‍💻 Developer
 
-Klik area game untuk mengaktifkan pointer lock pada desktop. Tekan `Esc` untuk melepas pointer lock dan membuka pause.
+**Muhammad Hafizd Anshari**
 
-## Struktur proyek
+GitHub: [@Muhzarx](https://github.com/Muhzarx)
 
-```text
-sunyi-lembah-terakhir/
-├── index.html
-├── README.md
-└── src/
-    ├── game.js
-    └── style.css
-```
+Repository: [SUNYI](https://github.com/Muhzarx/SUNYI)
 
-## Catatan teknis dan batasan versi awal
+---
 
-Versi ini adalah fondasi game yang playable dan dapat dikembangkan. Model karakter, lingkungan, dan musuh dibangun secara prosedural menggunakan geometri Three.js; belum menggunakan rig humanoid profesional, motion-capture, voice acting, atau aset audio rekaman. AI musuh menggunakan deteksi jarak dan steering sederhana, bukan pathfinding navmesh. Dunia dibuat sebagai area eksplorasi terbuka berbatas dengan objek prosedural, bukan dunia tak terbatas.
+<p align="center">
+  <strong>🌑 SUNYI: LEMBAH TERAKHIR</strong><br>
+  <i>Di tempat ini, kesunyian bukan berarti tidak ada siapa-siapa.</i>
+</p>
 
-Penyimpanan menggunakan `localStorage` pada browser/perangkat yang sama. Progress tidak otomatis tersinkron antar perangkat. Kinerja pada Android bergantung pada kemampuan GPU dan browser; untuk perangkat kelas bawah, turunkan resolusi atau jumlah objek saat pengembangan lanjutan.
-
-## Roadmap pengembangan
-
-- [ ] Model karakter dan musuh rigged dengan animasi skeletal
-- [ ] Navmesh/pathfinding dan perilaku AI berbasis state machine
-- [ ] Interior bangunan yang bisa dimasuki
-- [ ] Sistem cuaca, siklus siang-malam, dan kejadian horor dinamis
-- [ ] Audio spasial dan soundscape rekaman
-- [ ] Inventori grid, crafting, dan lebih banyak item
-- [ ] Quest bercabang, NPC ramah, dialog, dan cutscene
-- [ ] PWA/offline cache dan optimasi grafis Android
-- [ ] Pengujian lintas browser dan perangkat nyata
-
-## Lisensi dan hak cipta
-
-© 2026 Muhammad Hafizd Anshari. All Rights Reserved.
-
-Source code proyek ini disediakan untuk pengembangan dan publikasi oleh pemilik proyek. Three.js merupakan proyek pihak ketiga dan tetap tunduk pada lisensinya masing-masing.
+<p align="center">
+  © 2026 Muhammad Hafizd Anshari. All Rights Reserved.
+</p>
